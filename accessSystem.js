@@ -29,13 +29,15 @@ function checkAge()
 //method for verifying the ability to purchase alcohol
 function buyAlcohol()
 {
-
+    if (resultLegalAge === "isTrue") { console.log(``); }
+    if (resultLegalAge === "isFalse") { console.log(``); }
 }
 
 //method for checking driving ability
 function driveCar()
 {
-
+    if (resultLegalAge === "isTrue") { console.log(``); }
+    if (resultLegalAge === "isFalse") { console.log(``); }
 }
 
 //method for verifying a subscription
@@ -65,10 +67,16 @@ function runAction()
 //the main method that delegates the entire program
 function main()
 {
+    console.log("\nWelcome in the control applcation");
+    console.log("This program receives data and, depending on that data, displays a restriction or permission");
+
     let userChoise;
 
     while(true)
     {
+        console.log("Press \"1\" to check if you can buy alcohol.\nPress \"2\" to check if you are can drive a car.\n");
+        userChoise = Number(prompt("\n\tEnter your choise -> "));
+
         switch (userChoise)
         {
             case 1:
