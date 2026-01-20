@@ -1,5 +1,20 @@
 const prompt = require("prompt-sync")();
 
+//method for entering userAge
+function enterUserAge()
+{
+    let userAge;
+
+    while (isNaN(userAge))
+    {
+        userAge = Number(prompt("\nEnter your age, to check your eligibility -> "));
+
+        if (isNaN(userAge) || userAge <= 0 || userAge >= 150) { console.log("Must be a number in the range from 0 to 150, try again!"); continue; }
+    }
+
+    return userAge;
+}
+
 //method for verifying the user's age
 function checkAge()
 {
