@@ -17,8 +17,9 @@ function enterUserAge()
 
 //method for verifying the user's age
 function checkAge()
-{
-
+{    
+    if (userAge < 18) { return false; }
+    if (userAge >= 18) { return true; } 
 }
 
 //method for verifying the ability to purchase alcohol
