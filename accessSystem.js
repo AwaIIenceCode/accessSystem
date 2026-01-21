@@ -16,7 +16,7 @@ function enterUserAge()
 }
 
 //method for verifying the user's age
-function checkAge(minAge) 
+function checkAge(userAge, minAge) 
 { 
     return userAge >= minAge; 
 }
@@ -78,10 +78,10 @@ function writeComments()
 }
 
 //function for initiating actions and checks
-function runAction(actionFun, checkFun, failFun)
+function runAction(actionFun)
 {
     const userAge = enterUserAge();
-    const resultLegalAge = checkAge();
+    actionFun(userAge);
 }
 
 //the main method that delegates the entire program
@@ -101,7 +101,7 @@ function main()
         {
             case 1:
                 {
-                    runAction()
+                    runAction(buyAlcohol, )
                     break;
                 }
             
