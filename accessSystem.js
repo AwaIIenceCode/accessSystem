@@ -49,22 +49,32 @@ function driveCar(userAge)
     }
 }
 
-//method for verifying a subscription
-function checkSubscription()
-{
-
-}
-
 //method for checking video playback capability
-function watchMovie()
+function watchMovie(userAge)
 {
+    if (checkAge(userAge, 14))
+    {
+        console.log("Watching allowed");
+    }
 
+    else 
+    {
+        console.log("Watching forbidden");
+    }
 }
 
 //method for checking the ability to write comments
 function writeComments()
 {
-
+    if (checkAge(userAge, 16))
+        {
+            console.log("Writing allowed");
+        }
+    
+        else 
+        {
+            console.log("Writing forbidden");
+        }
 }
 
 //function for initiating actions and checks
