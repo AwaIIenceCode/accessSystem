@@ -16,28 +16,37 @@ function enterUserAge()
 }
 
 //method for verifying the user's age
-function checkAge()
-{
-    let resultLegalAge;
-    
-    if (userAge < 18) { resultLegalAge = "isFalse"; }
-    if (userAge >= 18) { resultLegalAge = "isTrue"; } 
-
-    return resultAge;
+function checkAge(minAge) 
+{ 
+    return userAge >= minAge; 
 }
 
 //method for verifying the ability to purchase alcohol
-function buyAlcohol()
+function buyAlcohol(userAge)
 {
-    if (resultLegalAge === "isTrue") { console.log(``); }
-    if (resultLegalAge === "isFalse") { console.log(``); }
+    if (checkAge(userAge,21))
+    {
+        console.log("Alcohol allowed");
+    }
+
+    else 
+    {
+        console.log("Alcohol forbidden");
+    }
 }
 
 //method for checking driving ability
-function driveCar()
+function driveCar(userAge)
 {
-    if (resultLegalAge === "isTrue") { console.log(``); }
-    if (resultLegalAge === "isFalse") { console.log(``); }
+    if (checkAge(userAge,18))
+    {
+        console.log("Driving allowed");
+    }
+
+    else 
+    {
+        console.log("Driving forbidden");
+    }
 }
 
 //method for verifying a subscription
@@ -59,9 +68,10 @@ function writeComments()
 }
 
 //function for initiating actions and checks
-function runAction()
+function runAction(actionFun, checkFun, failFun)
 {
-
+    const userAge = enterUserAge();
+    const resultLegalAge = checkAge();
 }
 
 //the main method that delegates the entire program
@@ -81,6 +91,7 @@ function main()
         {
             case 1:
                 {
+                    runAction()
                     break;
                 }
             
