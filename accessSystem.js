@@ -103,7 +103,7 @@ function main()
           );
           
 
-        userChoise = Number(prompt("\n\tEnter your choise -> "));
+        userChoise = Number(prompt("\nEnter your choise -> "));
 
         switch (userChoise)
         {
