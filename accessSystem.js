@@ -94,7 +94,15 @@ function main()
 
     while(true)
     {
-        console.log("Press \"1\" to check if you can buy alcohol.\nPress \"2\" to check if you are can drive a car.\n");
+        console.log(
+            "\nPress \"1\" to check if you can buy alcohol.\n" +
+            "Press \"2\" to check if you can drive a car.\n" +
+            "Press \"3\" to check if you can watch movie.\n" +
+            "Press \"4\" to check if you can write comments.\n" +
+            "Press \"5\" for exit with program."
+          );
+          
+
         userChoise = Number(prompt("\n\tEnter your choise -> "));
 
         switch (userChoise)
