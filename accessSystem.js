@@ -101,21 +101,28 @@ function main()
         {
             case 1:
                 {
-                    runAction(buyAlcohol, )
+                    runAction(buyAlcohol);
                     break;
                 }
             
             case 2:
                 {
+                    runAction(driveCar);
                     break;
                 }
 
             case 3:
                 {
+                    runAction(watchMovie);
+                    break;
+                }
+            case 4:
+                {
+                    runAction(writeComments);
                     break;
                 }
 
-            case 4:
+            case 5:
                 {
                     console.log("\nYou have exited the program. Have a nice day!");           
                     return;
