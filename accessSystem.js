@@ -64,7 +64,7 @@ function watchMovie(userAge)
 }
 
 //method for checking the ability to write comments
-function writeComments()
+function writeComments(userAge)
 {
     if (checkAge(userAge, 16))
         {
